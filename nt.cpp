@@ -53,8 +53,8 @@ TIII egcd(int a, int b) {
 // returns all solutions to ax = b (mod n)
 VI mod_solve(int a, int b, int n) {
   VI ret;
-  int g,x,y;
-  tie(g,x,y) = egcd(a, n);
+  int g,x;
+  tie(g,x,ignore) = egcd(a, n);
   if (!(b%g)) {
     x = mod(x*(b/g), n);
     for (int i = 0; i < g; i++)
