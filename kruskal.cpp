@@ -79,12 +79,12 @@ int main() {
 			}
 			k++;
 		}
-		for (auto &v : vv) {
-			for (auto &a : v) {
-				cout << a << "	 ";
-			}
-			cout << endl;
-		}
+		// for (auto &v : vv) {
+		// 	for (auto &a : v) {
+		// 		cout << a << "	 ";
+		// 	}
+		// 	cout << endl;
+		// }
 		cout << Kruskal(vv) << endl;
 	}
 }
