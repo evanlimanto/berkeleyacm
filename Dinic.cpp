@@ -15,6 +15,7 @@ struct Edge {
     Edge(int u, int v, LL cap): u(u), v(v), cap(cap), flow(0) {}
 };
 
+// Indexes of nodes are 0-indexed
 struct Dinic {
     int N;
     vector<Edge> E;
