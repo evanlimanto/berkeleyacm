@@ -14,13 +14,16 @@
 #include <iostream>
 #include <vector>
 #include <complex>
+#include <cmath>
 
 using namespace std;
 
-typedef long double DOUBLE;
+typedef double DOUBLE;
 typedef complex<DOUBLE> COMPLEX;
 typedef vector<DOUBLE> VD;
 typedef vector<COMPLEX> VC;
+
+const double PI = acos(-1.0);
 
 struct FFT {
   VC A;
@@ -35,28 +38,28 @@ struct FFT {
     return ret;
   }
 
-  void BitReverseCopy(VC a) {
+  void BitReverseCopy(const VC &a) {
     for (n = 1, L = 0; n < a.size(); n <<= 1, L++) ;
     A.resize(n);
     for (int k = 0; k < n; k++) 
       A[ReverseBits(k)] = a[k];
   }
   
-  VC DFT(VC a, bool inverse) {
+  VC DFT(const VC &a, bool inverse) {
     BitReverseCopy(a);
     for (int s = 1; s <= L; s++) {
       int m = 1 << s;
-      COMPLEX wm = exp(COMPLEX(0, 2.0 * M_PI / m));
+      COMPLEX wm = exp(COMPLEX(0, 2.0 * PI / m));
       if (inverse) wm = COMPLEX(1, 0) / wm;
       for (int k = 0; k < n; k += m) {
-    COMPLEX w = 1;
-    for (int j = 0; j < m/2; j++) {
-      COMPLEX t = w * A[k + j + m/2];
-      COMPLEX u = A[k + j];
-      A[k + j] = u + t;
-      A[k + j + m/2] = u - t;
-      w = w * wm;
-    }
+        COMPLEX w = 1;
+        for (int j = 0; j < m/2; j++) {
+          COMPLEX t = w * A[k + j + m/2];
+          COMPLEX u = A[k + j];
+          A[k + j] = u + t;
+          A[k + j + m/2] = u - t;
+          w = w * wm;
+        }
       }
     }
     if (inverse) for (int i = 0; i < n; i++) A[i] /= n;
@@ -64,7 +67,7 @@ struct FFT {
   }
 
   // c[k] = sum_{i=0}^k a[i] b[k-i]
-  VD Convolution(VD a, VD b) {
+  VD Convolution(const VD &a, const VD &b) {
     int L = 1;
     while ((1 << L) < a.size()) L++;
     while ((1 << L) < b.size()) L++;
@@ -87,16 +90,30 @@ struct FFT {
 
 };
 
+int n, m, a, b;
+double arr[200005];
+FFT fft;
+bool flag[200005];
+const double EPS = 1e-5;
 int main() {
-  double a[] = {1, 3, 4, 5, 7};
-  double b[] = {2, 4, 6};
+  arr[0] = 1.0;
+  cin >> n;
+  for (int i = 1; i <= n; i++) {
+    cin >> a;
+    arr[a] = 1.0;
+  }
 
-  FFT fft;
-  VD c = fft.Convolution(VD(a, a + 5), VD(b, b + 3));
+  VD vv(arr, arr + 200001);
 
-  // expected output: 2 10 26 44 58 58 42
-  for (int i = 0; i < c.size(); i++) cerr << c[i] << " ";
-  cerr << endl;
-  
+  VD c = fft.Convolution(vv, vv);
+  cin >> m;
+  int ans = 0;
+  for (int i = 1; i <= m; i++) {
+    cin >> b;
+    if (c[b] > EPS) {
+      ++ans;
+    }
+  }
+  cout << ans << endl;
   return 0;
 }
