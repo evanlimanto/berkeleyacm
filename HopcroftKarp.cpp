@@ -20,6 +20,7 @@ void init(int _n1, int _n2) {
 	fill(last, last + n1, -1);
 }
 
+// Nodes are 0-indexed
 void addEdge(int u, int v) {
 	head[edges] = v;
 	prv[edges] = last[u];

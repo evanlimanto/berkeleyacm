@@ -11,7 +11,7 @@
 using namespace std;
 
 typedef long long LL;
-typedef pair<int, int> pii; 
+typedef pair<int, int> pii;
 
 const int INF = 1000 * 1000 * 1000;
 const LL LLINF = 1000000000000000000LL;
@@ -40,7 +40,6 @@ inline LL update(LL old, int len, LL rem, LL add, int primeEx) {
 }
 
 int main() {
-
 	prec[0] = 1;
 	for (int i = 1; i <= 4000000; i++) {
 		prec[i] = prec[i-1] * P;

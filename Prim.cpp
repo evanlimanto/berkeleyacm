@@ -10,78 +10,58 @@
 //  OUTPUT: edges = list of pair<int, int> in MST
 //                  return total weight of tree
 
-#include <iostream>
-#include <queue>
-#include <cmath>
 #include <vector>
-
+#include <queue>
+#include <climits>
+#include <iostream>
 using namespace std;
 
-const int INF = 1000 * 1000 * 1000;
+typedef pair<int, int> pii;
+typedef vector<vector<pii> > Graph;
 
-#define pb push_back
-#define mp make_pair
+long long prim(Graph &g, vector<int> &pred) {
+    int n = g.size();
+    pred.assign(n, -1);
+    vector<bool> vis(n);
+    vector<int> prio(n, INT_MAX);
+    prio[0] = 0;
+    priority_queue<pii, vector<pii> , greater<pii> > q;
+    q.push(make_pair(0, 0));
+    long long res = 0;
 
-typedef vector<int> VI;
-typedef vector<vector<int> > VVI;
-typedef pair<int, int> PII;
-typedef vector<PII> VPII;
-
-int Prim(const VVI &w, VPII &edges) {
-    int n = (int)w.size();
-    VI found(n);
-    VI prev(n, -1);
-    VI dist(n, INF);
-
-    int here = 0;
-    dist[here] = 0;
-
-    while (here != -1) {
-        found[here] = true;
-        int best = -1;
-        for (int k = 0; k < n; k++) {
-            if (!found[k]) {
-                if (w[here][k] != -1 && dist[k] > w[here][k]) {
-                    dist[k] = w[here][k];
-                    prev[k] = here;
-                }
-                if (best == -1 || dist[k] < dist[best]) best = k;
+    while (!q.empty()) {
+        int d = q.top().first;
+        int u = q.top().second;
+        q.pop();
+        if (vis[u])
+            continue;
+        vis[u] = true;
+        res += d;
+        for (int i = 0; i < (int) g[u].size(); i++) {
+            int v = g[u][i].first;
+            if (vis[v])
+                continue;
+            int nprio = g[u][i].second;
+            if (prio[v] > nprio) {
+                prio[v] = nprio;
+                pred[v] = u;
+                q.push(make_pair(nprio, v));
             }
         }
-        here = best;
     }
-
-    int total_weight = 0;
-    for (int i = 0; i < n; i++) {
-        if (prev[i] != -1) {
-            edges.pb(mp(prev[i], i));
-            total_weight += w[prev[i]][i];
-        }
-    }
-    return total_weight;
+    return res;
 }
 
-int main(){
-  int ww[5][5] = {
-    {0, 400, 400, 300, 600},
-    {400, 0, 3, -1, 7},
-    {400, 3, 0, 2, 0},
-    {300, -1, 2, 0, 5},
-    {600, 7, 0, 5, 0}
-  };
-  VVI w(5, VI(5));
-  for (int i = 0; i < 5; i++)
-    for (int j = 0; j < 5; j++)
-      w[i][j] = ww[i][j];
-    
-  // expected: 305
-  //           2 1
-  //           3 2
-  //           0 3
-  //           2 4
-  
-  VPII edges;
-  cout << Prim (w, edges) << endl;
-  for (int i = 0; i < edges.size(); i++)
-    cout << edges[i].first << " " << edges[i].second << endl;
+int main() {
+    Graph g(3);
+    g[0].push_back(make_pair(1, 10));
+    g[1].push_back(make_pair(0, 10));
+    g[1].push_back(make_pair(2, 10));
+    g[2].push_back(make_pair(1, 10));
+    g[2].push_back(make_pair(0, 5));
+    g[0].push_back(make_pair(2, 5));
+
+    vector<int> prio;
+    long long res = prim(g, prio);
+    cout << res << endl;
 }
