@@ -68,7 +68,7 @@ int minv(int a, int n) {
   int g,x;
   tie(g,x,ignore) = egcd(a, n);
   if (g > 1) return -1;
-  return mod(x, n); 
+  return mod(x, n);
 }
 
 PII crt(int m1, int r1, int m2, int r2) {
@@ -86,6 +86,17 @@ PII crt(const VI &m, const VI &r) {
   }
   return ret;
 }
+
+/*
+Multiplying nCr quickly:
+
+Lucas's Theorem reduces nCr % M to
+
+(n0Cr0 % M) (n1Cr1 % M) ... (nkCrk % M)
+
+(nknk-1...n0) is the base M representation of n
+(rkrk-1...r0) is the base M representation of r
+*/
 
 int main() {
   cout << "expect 2" << endl;
