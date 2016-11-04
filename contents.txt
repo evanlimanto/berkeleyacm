@@ -5,40 +5,40 @@
 
 [Combinatorial optimization]
 Dinic.cpp	Dinitz's Algorithm
-MinCostMaxFlow.cpp	Min-cost max-flow
-MinCostMatching.cpp	Min-cost matching
-HopcroftKarp.cpp	Max bipartite matching
-MinCut.cpp	Global min-cut
+MinCostMaxFlow.cpp	Min-cost Max-flow
+MinCostMatching.cpp	Min-cost Matching
+HopcroftKarp.cpp	Max bipartite Matching
+MinCut.cpp	Global Min-cut
 
 [Geometry]
-ConvexHull.cpp	Convex hull
+ConvexHull.cpp	Convex Hull
 GrahamScan.cpp 	Graham Scan
 IntersectingSegments.cpp	Intersecting Line Segments
-Geometry.cpp	Miscellaneous geometry
+Geometry.cpp	Miscellaneous Geometry
 
 [Numerical algorithms]
-Math.cpp	Number theory (modular, Chinese remainder, Linear Diophantine)
-GaussJordan.cpp	Systems of linear equations, matrix inverse, determinant
-ReducedRowEchelonForm.cpp	Reduced row echelon form, matrix rank
-FFT.cpp	Fast Fourier transform
-Simplex.cpp	Simplex algorithm
+Math.cpp	Number Theory (modular, Chinese remainder, Linear Diophantine)
+GaussJordan.cpp	Systems of linear equations, Matrix Inverse, Determinant
+ReducedRowEchelonForm.cpp	Reduced row echelon form, Matrix rank
+FFT.cpp	Fast Fourier Transform
+Simplex.cpp	Simplex Algorithm
 
 [Graph algorithms]
 BellmanFord.cpp	Bellman-Ford shortest paths with negative edge weights (C++)
 FloydWarshall.cpp	Floyd Warshall
-EulerianPath.cpp	Eulerian path
-Prim.cpp	Minimum spanning trees
+EulerianPath.cpp	Eulerian Path
+Prim.cpp	Minimum Spanning Trees
 Tarjan.cpp	Tarjan's Algorithm
-TopologicalSort.cpp	Topological sort (C++)
+TopologicalSort.cpp	Topological Sort (C++)
 
 [Data structures]
 AVL.cpp	Adelson-Valskii Landis Tree
-UnionFind.cpp	Union-find set
-LCA.cpp	Lowest common ancestor
+UnionFind.cpp	Union-find Disjoin Set
+LCA.cpp	Lowest Common Ancestor
 
 [Strings]
 KMP.cpp	Knuth-Morris-Pratt
-SuffixArray.cpp	Suffix array
+SuffixArray.cpp	Suffix Array
 Manacher.cpp	Manacher's Algorithm
 RabinKarp.cpp	Rabin Karp Algorithm
 Z-algo.cpp	Z Algorithm
@@ -48,5 +48,5 @@ LIS.cpp	Longest Increasing Subsequence
 Laguerre.cpp	Laguerre's Algorithm for finding roots to a polynomial
 Dates.cpp	Dates
 Diameter.cpp	Diameter
-Primes.cpp	Prime numbers
+Primes.cpp	Prime Numbers
 HeavyLight.cpp	Heavy-Light Decomposition
