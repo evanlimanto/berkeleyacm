@@ -104,6 +104,9 @@ Lucas's Theorem reduces nCr % M to
 
 (nknk-1...n0) is the base M representation of n
 (rkrk-1...r0) is the base M representation of r
+
+Pick's Theorem:
+Area of a polygon: B/2 + I - 1
 */
 
 int main() {
