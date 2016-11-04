@@ -52,9 +52,9 @@ void buildLCP()
 /*
 Suffix array O(n lg n)
 */
-char str [MAX_N];
-int N, m, SA [MAX_N], LCP [MAX_N];
-int x [MAX_N], y [MAX_N], w [MAX_N], c [MAX_N];
+char str [MAXN];
+int m, SA [MAXN], LCP [MAXN];
+int x [MAXN], y [MAXN], w [MAXN], c [MAXN];
 
 inline bool cmp (const int a, const int b, const int l) { return (y [a] == y [b] && y [a + l] == y [b + l]); }
 
@@ -88,4 +88,8 @@ void suffixArray () {
     N = strlen (str);
     DA ();
     kasaiLCP ();
+}
+
+int main() {
+    return 0;
 }

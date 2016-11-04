@@ -44,3 +44,7 @@ bool FloydWarshall(VVI &w, VVI &prev) {
         if (w[i][i] < 0) return false;
     return true;
 }
+
+int main() {
+    return 0;
+}

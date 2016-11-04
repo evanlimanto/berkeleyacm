@@ -33,3 +33,7 @@
 //    The largest prime smaller than 10000000000000000 is 9999999999999937.
 //    The largest prime smaller than 100000000000000000 is 99999999999999997.
 //    The largest prime smaller than 1000000000000000000 is 999999999999999989.
+
+int main() {
+    return 0;
+}

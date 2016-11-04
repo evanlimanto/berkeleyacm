@@ -20,6 +20,7 @@
 #include <cstdio>
 #include <vector>
 #include <iostream>
+#include <deque>
 
 using namespace std;
 
@@ -29,9 +30,12 @@ typedef long long C;
 #define F_INF 1e+9
 #define C_INF 1e+9
 #define NUM 10005
+#define SIZE(x) ((int)x.size())
 
 #define pb push_back
 #define mp make_pair
+#define fi first
+#define se second
 
 vector<F> cap;
 vector<C> cost;
@@ -121,3 +125,7 @@ struct MinCostFlow {
     return mp(ansf, ansc);
   }
 };
+
+int main() {
+    return 0;
+}

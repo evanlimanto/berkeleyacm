@@ -14,6 +14,7 @@ string preprocess(string &s) {
         ret += "#" + s.substr(i, 1);
     }
     ret += "#$";
+    return ret;
 }
 
 string longestPalindrome(string &s) {
@@ -48,4 +49,8 @@ string longestPalindrome(string &s) {
         }
     }
     return s.substr((centerIndex - 1 - maxlen) / 2, maxlen);
+}
+
+int main() {
+    return 0;
 }

@@ -128,3 +128,7 @@ struct AVL {
 		return kth(root, k);
 	}
 };
+
+int main() {
+    return 0;
+}

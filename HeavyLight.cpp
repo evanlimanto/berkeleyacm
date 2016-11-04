@@ -121,3 +121,7 @@ void look_inside(int N) {
 	for (int i = 0; i < N; i++)
        printf("(%d, %d)\n", i, head[i]);
 }
+
+int main() {
+    return 0;
+}

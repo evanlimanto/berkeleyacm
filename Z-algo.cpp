@@ -26,3 +26,7 @@ void z_algo(const string &s, vector<int> &z) {
         }
     }
 }
+
+int main() {
+    return 0;
+}

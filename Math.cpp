@@ -1,9 +1,10 @@
-#include <tuple>
 #include <vector>
 #include <iostream>
+#include <utility>
 using namespace std;
 typedef vector<int> VI;
-typedef tuple<int,int,int> TIII;
+typedef pair<int, int> pii;
+typedef pair<int, pii> piii;
 typedef pair<int, int> PII;
 
 // return smallest positive number equiv to a % b
@@ -38,7 +39,7 @@ int pmod(int a, int b, int m) {
 }
 
 // returns a tuple of 3 ints containing d, x, y s.t. d = a * x + b * y
-TIII egcd(int a, int b) {
+piii egcd(int a, int b) {
   int x, xx, y, yy;
   xx = y = 0; yy = x = 1;
   while (b) {
@@ -47,14 +48,16 @@ TIII egcd(int a, int b) {
     t = xx; xx = x - q*xx; x = t;
     t = yy; yy = y - q*yy; y = t;
   }
-  return TIII(a, x, y);
+  return piii(a, pii(x, y));
 }
 
 // returns all solutions to ax = b (mod n)
 VI mod_solve(int a, int b, int n) {
   VI ret;
   int g,x;
-  tie(g,x,ignore) = egcd(a, n);
+  piii egcd_ret = egcd(a, n);
+  g = egcd_ret.first;
+  x = egcd_ret.second.first;
   if (!(b%g)) {
     x = mod(x*(b/g), n);
     for (int i = 0; i < g; i++)
@@ -66,20 +69,25 @@ VI mod_solve(int a, int b, int n) {
 // modular inverse of a mod n, or -1 if gcd(a, n) != 1
 int minv(int a, int n) {
   int g,x;
-  tie(g,x,ignore) = egcd(a, n);
+  piii egcd_ret = egcd(a, n);
+  g = egcd_ret.first;
+  x = egcd_ret.second.first;
   if (g > 1) return -1;
   return mod(x, n);
 }
 
 PII crt(int m1, int r1, int m2, int r2) {
   int g, s, t;
-  tie(g,s,t) = egcd(m1, m2);
-  if (r1 % g != r2 % g) return {0, -1};
-  return {mod(s*r2*m1 + t*r1*m2, m1*m2)/g, m1*m2/g};
+  piii egcd_ret = egcd(m1, m2);
+  g = egcd_ret.first;
+  s = egcd_ret.second.first;
+  t = egcd_ret.second.second;
+  if (r1 % g != r2 % g) return PII(0, -1);
+  return PII(mod(s*r2*m1 + t*r1*m2, m1*m2)/g, m1*m2/g);
 }
 
 PII crt(const VI &m, const VI &r) {
-  PII ret = {r[0], m[0]};
+  PII ret = PII(r[0], m[0]);
   for (int i = 1; i < m.size(); i++) {
     ret = crt(ret.second, ret.first, m[i], r[i]);
     if (ret.second == -1) break;
@@ -103,21 +111,28 @@ int main() {
   cout << gcd(14, 30) << endl;
 
   int g, x, y;
-  tie(g, x, y) = egcd(14, 30);
+  piii egcd_ret = egcd(14, 30);
+  g = egcd_ret.first;
+  x = egcd_ret.second.first;
+  y = egcd_ret.second.second;
   cout << "expect 2 -2 1" << endl;
   cout << g << " " << x << " " << y << endl;
 
   VI sols = mod_solve(14, 30, 100);
-  cout << "expect 95 451" << endl;
-  for (auto i : sols) {
-    cout << i << " ";
+  cout << "expect 95 45" << endl;
+  for (int i = 0; i < (int)sols.size(); i++) {
+    cout << sols[i] << " ";
   }
   cout << endl;
 
   cout << "expect 8" << endl;
   cout << minv(8, 9) << endl;
 
-  PII ret = crt({3,5,7}, {2,3,2});
+  vector<int> v1;
+  v1.push_back(3); v1.push_back(5); v1.push_back(7);
+  vector<int> v2;
+  v2.push_back(2); v2.push_back(3); v2.push_back(2);
+  PII ret = crt(v1, v2);
   cout << "expect 23 105" << endl;
   cout << ret.first << " " << ret.second << endl;
 }

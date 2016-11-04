@@ -1,4 +1,4 @@
-// Reduced row echelon form via Gauss-Jordan elimination 
+// Reduced row echelon form via Gauss-Jordan elimination
 // with partial pivoting.  This can be used for computing
 // the rank of a matrix.
 //
@@ -60,9 +60,9 @@ int main() {
   // expected: 3
   cout << "Rank: " << rank << endl;
 
-  // expected: 1 0 0 1 
-  //           0 1 0 3 
-  //           0 0 1 -3 
+  // expected: 1 0 0 1
+  //           0 1 0 3
+  //           0 0 1 -3
   //           0 0 0 3.10862e-15
   //           0 0 0 2.22045e-15
   cout << "rref: " << endl;

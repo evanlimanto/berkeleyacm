@@ -23,10 +23,10 @@ class segment {
     bool operator<(const segment &o) const {
         if (a.first < o.a.first) {
             int s = cross(a, b, o.a);
-            return (s > 0 || s == 0 && a.second < o.a.second);
+            return ((s > 0) || (s == 0 && a.second < o.a.second));
         } else {
             int s = cross(o.a, o.b, a);
-            return (s < 0 || s == 0 && a.second < o.a.second);
+            return ((s < 0) || (s == 0 && a.second < o.a.second));
         }
         return a.second < o.a.second;
     }
@@ -40,12 +40,12 @@ bool intersect(segment s1, segment s2) {
     }
     int z1 = (x3 - x1) * (y2 - y1) - (y3 - y1) * (x2 - x1);
     int z2 = (x4 - x1) * (y2 - y1) - (y4 - y1) * (x2 - x1);
-    if (z1 < 0 && z2 < 0 || z1 > 0 && z2 > 0) {
+    if ((z1 < 0 && z2 < 0) || (z1 > 0 && z2 > 0)) {
         return false;
     }
     int z3 = (x1 - x3) * (y4 - y3) - (y1 - y3) * (x4 - x3);
     int z4 = (x2 - x3) * (y4 - y3) - (y2 - y3) * (x4 - x3);
-    if (z3 < 0 && z4 < 0 || z3 > 0 && z4 > 0) {
+    if ((z3 < 0 && z4 < 0) || (z3 > 0 && z4 > 0)) {
         return false;
     }
     return true;
@@ -60,7 +60,7 @@ class event {
         p(p), id(id), type(type) {
     }
     bool operator<(const event &o) const {
-        return p.first < o.p.first || p.first == o.p.first && (type > o.type || type == o.type && p.second < o.p.second);
+        return (p.first < o.p.first) || (p.first == o.p.first && ((type > o.type || type == o.type) && p.second < o.p.second));
     }
 };
 

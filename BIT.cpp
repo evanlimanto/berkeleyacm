@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <cstdio>
 
 using namespace std;
 
@@ -35,6 +35,5 @@ inline int getIndex(int x) {
 }
 
 int main() {
-    
     return 0;
 }

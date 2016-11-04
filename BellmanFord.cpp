@@ -39,3 +39,7 @@ bool BellmanFord(const VVI &w, VI &dist, VI &prev, int start) {
 
     return true;
 }
+
+int main() {
+    return 0;
+}

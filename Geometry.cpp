@@ -26,6 +26,7 @@ double dist2(PT p, PT q)   { return dot(p-q,p-q); }
 double cross(PT p, PT q)   { return p.x*q.y-p.y*q.x; }
 ostream &operator<<(ostream &os, const PT &p) {
   os << "(" << p.x << "," << p.y << ")";
+  return os;
 }
 
 // rotate a point CCW or CW around the origin
@@ -117,8 +118,8 @@ bool PointInPolygon(const vector<PT> &p, PT q) {
   bool c = 0;
   for (int i = 0; i < p.size(); i++){
     int j = (i+1)%p.size();
-    if ((p[i].y <= q.y && q.y < p[j].y ||
-      p[j].y <= q.y && q.y < p[i].y) &&
+    if (((p[i].y <= q.y && q.y < p[j].y) ||
+         (p[j].y <= q.y && q.y < p[i].y)) &&
       q.x < p[i].x + (p[j].x - p[i].x) * (q.y - p[i].y) / (p[j].y - p[i].y))
       c = !c;
   }
