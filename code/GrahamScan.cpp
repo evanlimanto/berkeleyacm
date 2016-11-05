@@ -16,12 +16,16 @@ vector<point> convexHull(vector<point> p) {
     int k = 0;
     sort(p.begin(), p.end());
     vector<point> q(n * 2);
-    for (int i = 0; i < n; q[k++] = p[i++])
-        for (; k >= 2 && !cw(q[k - 2], q[k - 1], p[i]); --k)
-            ;
-    for (int i = n - 2, t = k; i >= 0; q[k++] = p[i--])
-        for (; k > t && !cw(q[k - 2], q[k - 1], p[i]); --k)
-            ;
+    for (int i = 0; i < n; q[k++] = p[i++]) {
+        for (; k >= 2 && !cw(q[k - 2], q[k - 1], p[i]); --k) {
+            continue;
+        }
+    }
+    for (int i = n - 2, t = k; i >= 0; q[k++] = p[i--]) {
+        for (; k > t && !cw(q[k - 2], q[k - 1], p[i]); --k) {
+            continue;
+        }
+    }
     q.resize(k - 1 - (q[0] == q[1]));
     return q;
 }

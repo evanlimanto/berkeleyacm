@@ -12,7 +12,7 @@ MinCut.cpp	Global Min-cut
 
 [Geometry]
 ConvexHull.cpp	Convex Hull
-GrahamScan.cpp 	Graham Scan
+GrahamScan.cpp	Graham Scan
 IntersectingSegments.cpp	Intersecting Line Segments
 Geometry.cpp	Miscellaneous Geometry
 
