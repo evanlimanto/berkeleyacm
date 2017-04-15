@@ -6,9 +6,7 @@
 //   INPUT: a vector of integers
 //   OUTPUT: a vector containing the longest increasing subsequence
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 

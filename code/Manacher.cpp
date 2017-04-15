@@ -1,8 +1,7 @@
 // Runs Manacher's algorithm to compute the longest palindrome
 // in a string in linear time.
 
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

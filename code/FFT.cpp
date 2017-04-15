@@ -11,10 +11,7 @@
 // zero-pad your input to the next largest power of 2 and compute the
 // DFT or inverse DFT.
 
-#include <iostream>
-#include <vector>
-#include <complex>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

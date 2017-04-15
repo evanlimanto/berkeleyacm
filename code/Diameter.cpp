@@ -1,7 +1,5 @@
-#include <algorithm>
-#include <vector>
-#include <cmath>
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 typedef pair<double, double> point;

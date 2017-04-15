@@ -7,7 +7,7 @@
 //  OUTPUT: dist[i] = min cost path from start to i.
 //          prev[i] = previous node of i on best path from start node.
 
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -38,8 +38,4 @@ bool BellmanFord(const VVI &w, VI &dist, VI &prev, int start) {
     }
 
     return true;
-}
-
-int main() {
-    return 0;
 }

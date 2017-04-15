@@ -1,7 +1,9 @@
-#include <vector>
-#include <iostream>
-#include <iomanip>
-#include <complex>
+/*
+ * Laguerre's method for finding roots to polynomials.
+ */
+
+#include <bits/stdc++.h>
+
 using namespace std;
 
 typedef complex<double> cdouble;

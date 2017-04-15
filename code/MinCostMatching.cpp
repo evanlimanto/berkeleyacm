@@ -14,10 +14,7 @@
 // maximization, simply negate the cost[][] matrix.
 //////////////////////////////////////////////////////////////////////
 
-#include <algorithm>
-#include <cstdio>
-#include <cmath>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

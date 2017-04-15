@@ -1,7 +1,7 @@
-#include <vector>
-#include <iostream>
-#include <utility>
+#include <bits/stdc++.h>
+
 using namespace std;
+
 typedef vector<int> VI;
 typedef pair<int, int> pii;
 typedef pair<int, pii> piii;

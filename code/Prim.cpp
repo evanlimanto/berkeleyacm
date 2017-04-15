@@ -10,10 +10,8 @@
 //  OUTPUT: edges = list of pair<int, int> in MST
 //                  return total weight of tree
 
-#include <vector>
-#include <queue>
-#include <climits>
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 typedef pair<int, int> pii;

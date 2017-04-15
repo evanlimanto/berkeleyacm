@@ -1,7 +1,6 @@
 // Solves the Maximum Matching problem on a Bipartite Graph.
 
-#include <algorithm>
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

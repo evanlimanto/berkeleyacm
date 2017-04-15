@@ -1,21 +1,15 @@
 /* Complexity: O(E + V)
- Tarjan's algorithm for finding strongly connected
+ * Tarjan's algorithm for finding strongly connected
 components.
- *d[i] = Discovery time of node i. (Initialize to -1)
- *low[i] = Lowest discovery time reachable from node
- i. (Doesn't need to be initialized)
- *scc[i] = Strongly connected component of node i. (Doesn't
- need to be initialized)
- *s = Stack used by the algorithm (Initialize to an empty
- stack)
- *stacked[i] = True if i was pushed into s. (Initialize to
- false)
- *ticks = Clock used for discovery times (Initialize to 0)
- *current_scc = ID of the current_scc being discovered
- (Initialize to 0)
-*/
-#include <vector>
-#include <stack>
+ * d[i] = Discovery time of node i. (Initialize to -1)
+ * low[i] = Lowest discovery time reachable from node i. (Doesn't need to be initialized)
+ * scc[i] = Strongly connected component of node i. (Doesn't need to be initialized)
+ * s = Stack used by the algorithm (Initialize to an empty stack)
+ * stacked[i] = True if i was pushed into s. (Initialize to false)
+ * ticks = Clock used for discovery times (Initialize to 0)
+ * current_scc = ID of the current_scc being discovered (Initialize to 0)
+ */
+#include <bits/stdc++.h>
 
 using namespace std;
 

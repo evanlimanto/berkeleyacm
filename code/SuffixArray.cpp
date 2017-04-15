@@ -2,9 +2,7 @@
 Suffix array O(n lg^2 n)
 LCP table O(n)
 */
-#include <cstdio>
-#include <algorithm>
-#include <cstring>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -88,8 +86,4 @@ void suffixArray () {
     N = strlen (str);
     DA ();
     kasaiLCP ();
-}
-
-int main() {
-    return 0;
 }

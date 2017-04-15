@@ -1,5 +1,9 @@
-#include <cstdio>
-#include <cstring>
+/*
+ * Usually used to solve 2-SAT.
+ * (a v b) ≡ (¬a ⇒ b) ≡ (¬b ⇒ a)
+ */
+
+#include <bits/stdc++.h>
 
 using namespace std;
 

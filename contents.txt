@@ -17,6 +17,7 @@ IntersectingSegments.cpp	Intersecting Line Segments
 Geometry.cpp	Miscellaneous Geometry
 
 [Numerical algorithms]
+BigNum.cpp	Arbitrary Precision Arithmetic
 Math.cpp	Number Theory (modular, Chinese remainder, Linear Diophantine)
 GaussJordan.cpp	Systems of linear equations, Matrix Inverse, Determinant
 ReducedRowEchelonForm.cpp	Reduced row echelon form, Matrix rank
@@ -29,22 +30,18 @@ FloydWarshall.cpp	Floyd Warshall
 EulerianPath.cpp	Eulerian Path
 Prim.cpp	Minimum Spanning Trees
 Tarjan.cpp	Tarjan's Algorithm
-TopologicalSort.cpp	Topological Sort (C++)
 
 [Data structures]
 AVL.cpp	Adelson-Valskii Landis Tree
-UnionFind.cpp	Union-find Disjoin Set
-LCA.cpp	Lowest Common Ancestor
 
 [Strings]
 KMP.cpp	Knuth-Morris-Pratt
 SuffixArray.cpp	Suffix Array
+SuffixArrayDC3.cpp	Suffix Array - DC3 Algorithm
 Manacher.cpp	Manacher's Algorithm
-RabinKarp.cpp	Rabin Karp Algorithm
 Z-algo.cpp	Z Algorithm
 
 [Miscellaneous]
-LIS.cpp	Longest Increasing Subsequence
 Laguerre.cpp	Laguerre's Algorithm for finding roots to a polynomial
 Dates.cpp	Dates
 Diameter.cpp	Diameter

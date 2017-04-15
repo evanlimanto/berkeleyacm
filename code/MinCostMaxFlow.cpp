@@ -16,11 +16,7 @@
 //     - (maximum flow value, minimum cost value)
 //     - To obtain the actual flow, look at positive values only.
 
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <deque>
+#include <bits/stdc++.h>
 
 using namespace std;
 

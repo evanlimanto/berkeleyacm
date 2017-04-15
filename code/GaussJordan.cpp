@@ -14,9 +14,7 @@
 //           A^{-1} = an nxn matrix (stored in a[][])
 //           returns determinant of a[][]
 
-#include <iostream>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

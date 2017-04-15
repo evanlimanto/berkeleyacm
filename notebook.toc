@@ -1,0 +1,32 @@
+\contentsline {section}{\numberline {1}Combinatorial optimization}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Dinitz's Algorithm}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Min-cost Max-flow}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Min-cost Matching}{2}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Max bipartite Matching}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Global Min-cut}{3}{subsection.1.5}
+\contentsline {section}{\numberline {2}Geometry}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Convex Hull}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Graham Scan}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Intersecting Line Segments}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Miscellaneous Geometry}{5}{subsection.2.4}
+\contentsline {section}{\numberline {3}Numerical algorithms}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Arbitrary Precision Arithmetic}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Number Theory (modular, Chinese remainder, Linear Diophantine)}{9}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Systems of linear equations, Matrix Inverse, Determinant}{10}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Reduced row echelon form, Matrix rank}{10}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Fast Fourier Transform}{11}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Simplex Algorithm}{11}{subsection.3.6}
+\contentsline {section}{\numberline {4}Graph algorithms}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Bellman-Ford shortest paths with negative edge weights (C++)}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Floyd Warshall}{12}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Eulerian Path}{13}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Minimum Spanning Trees}{13}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Tarjan's Algorithm}{13}{subsection.4.5}
+\contentsline {section}{\numberline {5}Data structures}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}Adelson-Valskii Landis Tree}{14}{subsection.5.1}
+\contentsline {section}{\numberline {6}Strings}{14}{section.6}
+\contentsline {subsection}{\numberline {6.1}Knuth-Morris-Pratt}{14}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Suffix Array}{15}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Suffix Array - DC3 Algorithm}{15}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Manacher's Algorithm}{16}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Z Algorithm}{17}{subsection.6.5}

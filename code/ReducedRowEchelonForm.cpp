@@ -9,9 +9,7 @@
 // OUTPUT:   rref[][] = an nxm matrix (stored in a[][])
 //           returns rank of a[][]
 
-#include <iostream>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

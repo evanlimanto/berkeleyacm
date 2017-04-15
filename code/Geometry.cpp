@@ -1,9 +1,6 @@
 // C++ routines for computational geometry.
 
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <cassert>
+#include <bits/stdc++.h>
 
 using namespace std;
 

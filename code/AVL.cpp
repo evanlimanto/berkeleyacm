@@ -1,7 +1,6 @@
 // Balanced Binary Search Tree implementation.
 
-#include <cstdio>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -128,7 +127,3 @@ struct AVL {
 		return kth(root, k);
 	}
 };
-
-int main() {
-    return 0;
-}

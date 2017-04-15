@@ -2,8 +2,7 @@
 // Z where Z[i] is the length of the longest substring starting from
 // S[i] which is also a prefix of S.
 
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -25,8 +24,4 @@ void z_algo(const string &s, vector<int> &z) {
             }
         }
     }
-}
-
-int main() {
-    return 0;
 }

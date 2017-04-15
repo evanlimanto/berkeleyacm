@@ -1,12 +1,8 @@
-#include <vector>
-#include <queue>
-#include <iostream>
-#include <cstdio>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 typedef long long LL;
-
 #define pb push_back
 
 struct Edge {

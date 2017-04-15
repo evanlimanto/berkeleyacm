@@ -3,8 +3,7 @@
 // as integers from 1 to 31, and years are expressed as 4-digit
 // integers.
 
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 
 using namespace std;
 
